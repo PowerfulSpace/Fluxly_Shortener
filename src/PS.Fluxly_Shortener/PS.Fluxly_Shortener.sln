@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FAD06CB5-605B-4A45-8CC3-C3F47717CAAB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Fluxly_Shortener.API", "PS.Fluxly_Shortener.API\PS.Fluxly_Shortener.API.csproj", "{F3307F57-E61B-40AD-8FB6-DBBB40E99965}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{AB103FBF-2144-4A84-A31A-61F6B34633CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Fluxly_Shortener.Web", "PS.Fluxly_Shortener.Web\PS.Fluxly_Shortener.Web.csproj", "{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,11 +21,16 @@ Global
 		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F3307F57-E61B-40AD-8FB6-DBBB40E99965} = {FAD06CB5-605B-4A45-8CC3-C3F47717CAAB}
+		{ACE45D8C-8E8E-49A1-8BCB-5BC92EA15AC4} = {AB103FBF-2144-4A84-A31A-61F6B34633CA}
 	EndGlobalSection
 EndGlobal

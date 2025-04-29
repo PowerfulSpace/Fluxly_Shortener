@@ -1,0 +1,17 @@
+﻿@model ShortenViewModel
+
+@{
+    ViewData["Title"] = "Shorten Page";
+}
+
+
+
+<form method="post">
+    <input asp-for="LongUrl" placeholder="Введите длинную ссылку" />
+    <button type="submit">Сократить</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.ShortUrl))
+{
+    <p>Короткая ссылка: <a href="@Model.ShortUrl">@Model.ShortUrl</a></p>
+}
