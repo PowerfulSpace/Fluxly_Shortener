@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{FAD06CB5-605B-4A45-8CC3-C3F47717CAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PS.Fluxly_Shortener.API", "PS.Fluxly_Shortener.API\PS.Fluxly_Shortener.API.csproj", "{F3307F57-E61B-40AD-8FB6-DBBB40E99965}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3307F57-E61B-40AD-8FB6-DBBB40E99965}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3307F57-E61B-40AD-8FB6-DBBB40E99965} = {FAD06CB5-605B-4A45-8CC3-C3F47717CAAB}
+	EndGlobalSection
+EndGlobal
