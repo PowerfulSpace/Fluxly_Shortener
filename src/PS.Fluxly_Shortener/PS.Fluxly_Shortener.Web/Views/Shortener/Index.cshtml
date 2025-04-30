@@ -1,17 +1,39 @@
 ﻿@model ShortenViewModel
-
 @{
-    ViewData["Title"] = "Shorten Page";
+    ViewData["Title"] = "Сократить ссылку";
 }
 
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow rounded">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Сократи свою ссылку ✂️</h2>
 
+                    <form method="post">
+                        <div class="form-group mb-3">
+                            <input asp-for="LongUrl" class="form-control form-control-lg" placeholder="Вставьте длинную ссылку здесь..." />
+                            @* <textarea asp-for="LongUrl" class="form-control form-control-lg" rows="3" placeholder="Вставьте длинную ссылку здесь..."></textarea> *@
+                            <span asp-validation-for="LongUrl" class="text-danger"></span>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Сократить</button>
+                        </div>
+                    </form>
 
-<form method="post">
-    <input asp-for="LongUrl" placeholder="Введите длинную ссылку" />
-    <button type="submit">Сократить</button>
-</form>
+                    @if (!string.IsNullOrEmpty(Model.ShortUrl))
+                    {
+                        <div class="alert alert-success mt-4 text-center">
+                            <strong>Короткая ссылка:</strong><br />
+                            <a href="@Model.ShortUrl" target="_blank">@Model.ShortUrl</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-@if (!string.IsNullOrEmpty(Model.ShortUrl))
-{
-    <p>Короткая ссылка: <a href="@Model.ShortUrl">@Model.ShortUrl</a></p>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }

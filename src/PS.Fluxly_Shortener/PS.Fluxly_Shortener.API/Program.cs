@@ -11,6 +11,17 @@ using PS.Fluxly_Shortener.API.Storage;
 var builder = WebApplication.CreateBuilder(args);
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://localhost:7202")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+
 // Настройка конфигурации
 builder.Services.Configure<ShortenerSettings>(builder.Configuration.GetSection("Shortener"));
 
@@ -37,9 +48,16 @@ var app = builder.Build();
     {
         app.MapOpenApi();
         app.UseSwagger();
+        app.UseSwaggerUI(options =>
+        {
+            options.SwaggerEndpoint("/swagger/v1/swagger.json", "Fluxly Shortener API v1");
+            options.RoutePrefix = string.Empty; // Делает Swagger доступным по корневому пути
+        });
     }
 
     app.UseHttpsRedirection();
+
+    app.UseCors();
 
     app.UseAuthorization();
 
